@@ -2,6 +2,8 @@
 
 import * as React from "react"
 import { ThemeProvider as NextThemesProvider, useTheme } from "next-themes"
+import { usePathname } from "next/navigation"
+import { MotionConfig } from "motion/react"
 
 function ThemeProvider({
   children,
@@ -15,8 +17,10 @@ function ThemeProvider({
       disableTransitionOnChange
       {...props}
     >
-      <ThemeHotkey />
-      {children}
+      <MotionConfig reducedMotion="user">
+        <ThemeHotkey />
+        {children}
+      </MotionConfig>
     </NextThemesProvider>
   )
 }
@@ -36,8 +40,14 @@ function isTypingTarget(target: EventTarget | null) {
 
 function ThemeHotkey() {
   const { resolvedTheme, setTheme } = useTheme()
+  const pathname = usePathname()
 
   React.useEffect(() => {
+    // Disable theme hotkey inside Keystatic admin or while typing
+    if (pathname?.startsWith('/keystatic')) {
+      return
+    }
+
     function onKeyDown(event: KeyboardEvent) {
       if (event.defaultPrevented || event.repeat) {
         return
@@ -63,7 +73,7 @@ function ThemeHotkey() {
     return () => {
       window.removeEventListener("keydown", onKeyDown)
     }
-  }, [resolvedTheme, setTheme])
+  }, [resolvedTheme, setTheme, pathname])
 
   return null
 }

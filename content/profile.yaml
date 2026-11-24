@@ -1,0 +1,32 @@
+name: Kevin A. Hernandez Garcia
+role: Full Stack Developer & CS Student
+githubUsername: Alke-14
+intro: >-
+  Computer Science student at Texas A&M University - San Antonio building
+  accessible web applications, automated document pipelines, and AI-driven
+  tools. When I'm not coding, I'm either rock climbing (v5 climber) or building
+  Gundams; I am an avid gamer but my time is always split between those two
+  mainly 
+skills:
+  - group: Languages
+    items:
+      - TypeScript / JavaScript
+      - Python
+      - PHP
+      - SQL
+      - LaTeX
+  - group: Frameworks & Web
+    items:
+      - React & Next.js
+      - Tailwind CSS & shadcn/ui
+      - Node.js & Express
+      - FastAPI
+      - Laravel Blade
+  - group: Databases & Cloud
+    items:
+      - MySQL & SQLite
+      - Supabase
+      - Linux / Ubuntu
+      - Git & GitHub
+      - Vercel
+      - WCAG 2.1 Accessibility

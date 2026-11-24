@@ -5,77 +5,105 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.141 0.005 285.823);
+    /* RX-105 Ξ (Xi) Gundam Palette (Light Mode - Chalk Titanium, Sensor Lime & V-Fin Gold) */
+    --background: oklch(0.985 0.005 285);
+    --foreground: oklch(0.16 0.025 285);
     --card: oklch(1 0 0);
-    --card-foreground: oklch(0.141 0.005 285.823);
+    --card-foreground: oklch(0.16 0.025 285);
     --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.141 0.005 285.823);
-    --primary: oklch(0.514 0.222 16.935);
-    --primary-foreground: oklch(0.969 0.015 12.422);
-    --secondary: oklch(0.967 0.001 286.375);
-    --secondary-foreground: oklch(0.21 0.006 285.885);
-    --muted: oklch(0.967 0.001 286.375);
-    --muted-foreground: oklch(0.552 0.016 285.938);
-    --accent: oklch(0.967 0.001 286.375);
-    --accent-foreground: oklch(0.21 0.006 285.885);
-    --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.92 0.004 286.32);
-    --input: oklch(0.92 0.004 286.32);
-    --ring: oklch(0.705 0.015 286.067);
-    --chart-1: oklch(0.81 0.117 11.638);
-    --chart-2: oklch(0.645 0.246 16.439);
-    --chart-3: oklch(0.586 0.253 17.585);
-    --chart-4: oklch(0.514 0.222 16.935);
-    --chart-5: oklch(0.455 0.188 13.697);
-    --radius: 0.625rem;
-    --sidebar: oklch(0.985 0 0);
-    --sidebar-foreground: oklch(0.141 0.005 285.823);
-    --sidebar-primary: oklch(0.586 0.253 17.585);
-    --sidebar-primary-foreground: oklch(0.969 0.015 12.422);
-    --sidebar-accent: oklch(0.967 0.001 286.375);
-    --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
-    --sidebar-border: oklch(0.92 0.004 286.32);
-    --sidebar-ring: oklch(0.705 0.015 286.067);
+    --popover-foreground: oklch(0.16 0.025 285);
+
+    /* Xi Sensor Acid/Emerald Green (WCAG AA: > 4.7:1 against light background) */
+    --primary: oklch(0.46 0.16 145);
+    --primary-foreground: oklch(0.99 0 0);
+
+    /* Graphite with subtle wisteria slate undertone */
+    --secondary: oklch(0.95 0.008 285);
+    --secondary-foreground: oklch(0.20 0.025 285);
+    --muted: oklch(0.95 0.008 285);
+    --muted-foreground: oklch(0.44 0.028 285);
+
+    --accent: oklch(0.93 0.015 285);
+    --accent-foreground: oklch(0.16 0.025 285);
+
+    /* Vermilion Red Trim Accent */
+    --destructive: oklch(0.48 0.20 22);
+
+    /* Mechanical Panel Line Borders */
+    --border: oklch(0.89 0.012 285);
+    --input: oklch(0.89 0.012 285);
+    --ring: oklch(0.46 0.16 145);
+
+    /* Xi Gundam Signature Semantic Tokens */
+    --xi-green: oklch(0.46 0.16 145);
+    --xi-vfin: oklch(0.55 0.16 75);
+    --xi-lavender: oklch(0.48 0.16 295);
+    --xi-red: oklch(0.48 0.20 22);
+
+    --radius: 0.375rem;
+    --sidebar: oklch(0.985 0.005 285);
+    --sidebar-foreground: oklch(0.16 0.025 285);
+    --sidebar-primary: oklch(0.46 0.16 145);
+    --sidebar-primary-foreground: oklch(0.99 0 0);
+    --sidebar-accent: oklch(0.95 0.008 285);
+    --sidebar-accent-foreground: oklch(0.20 0.025 285);
+    --sidebar-border: oklch(0.89 0.012 285);
+    --sidebar-ring: oklch(0.46 0.16 145);
 }
 
 .dark {
-    --background: oklch(0.141 0.005 285.823);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.21 0.006 285.885);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.21 0.006 285.885);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.455 0.188 13.697);
-    --primary-foreground: oklch(0.969 0.015 12.422);
-    --secondary: oklch(0.274 0.006 286.033);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.274 0.006 286.033);
-    --muted-foreground: oklch(0.705 0.015 286.067);
-    --accent: oklch(0.274 0.006 286.033);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.552 0.016 285.938);
-    --chart-1: oklch(0.81 0.117 11.638);
-    --chart-2: oklch(0.645 0.246 16.439);
-    --chart-3: oklch(0.586 0.253 17.585);
-    --chart-4: oklch(0.514 0.222 16.935);
-    --chart-5: oklch(0.455 0.188 13.697);
-    --sidebar: oklch(0.21 0.006 285.885);
-    --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.645 0.246 16.439);
-    --sidebar-primary-foreground: oklch(0.969 0.015 12.422);
-    --sidebar-accent: oklch(0.274 0.006 286.033);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.552 0.016 285.938);
+    /* RX-105 Ξ (Xi) Gundam Twilight / Night Flight (Dark Mode) */
+    --background: oklch(0.115 0.022 285);
+    --foreground: oklch(0.96 0.008 285);
+    --card: oklch(0.15 0.025 285);
+    --card-foreground: oklch(0.96 0.008 285);
+    --popover: oklch(0.15 0.025 285);
+    --popover-foreground: oklch(0.96 0.008 285);
+
+    /* Electric Sensor Lime / Minovsky Craft Glow (WCAG AA: > 8:1 against dark background) */
+    --primary: oklch(0.78 0.18 145);
+    --primary-foreground: oklch(0.09 0.015 285);
+
+    /* Deep Dusk Graphite Secondary / Muted */
+    --secondary: oklch(0.18 0.025 285);
+    --secondary-foreground: oklch(0.96 0.008 285);
+    --muted: oklch(0.18 0.025 285);
+    --muted-foreground: oklch(0.70 0.025 285);
+
+    --accent: oklch(0.20 0.03 285);
+    --accent-foreground: oklch(0.96 0.008 285);
+
+    /* Vermilion Red Trim Accent */
+    --destructive: oklch(0.68 0.20 20);
+
+    /* Subtle Dusk Panel Lines */
+    --border: oklch(0.24 0.028 285);
+    --input: oklch(0.24 0.028 285);
+    --ring: oklch(0.78 0.18 145);
+
+    /* Xi Gundam Signature Semantic Tokens */
+    --xi-green: oklch(0.78 0.18 145);
+    --xi-vfin: oklch(0.78 0.16 80);
+    --xi-lavender: oklch(0.80 0.14 295);
+    --xi-red: oklch(0.68 0.20 20);
+
+    --sidebar: oklch(0.15 0.025 285);
+    --sidebar-foreground: oklch(0.96 0.008 285);
+    --sidebar-primary: oklch(0.78 0.18 145);
+    --sidebar-primary-foreground: oklch(0.09 0.015 285);
+    --sidebar-accent: oklch(0.18 0.025 285);
+    --sidebar-accent-foreground: oklch(0.96 0.008 285);
+    --sidebar-border: oklch(0.24 0.028 285);
+    --sidebar-ring: oklch(0.78 0.18 145);
 }
 
 @theme inline {
     --font-sans: var(--font-sans);
     --font-heading: var(--font-heading);
+    --color-xi-green: var(--xi-green);
+    --color-xi-vfin: var(--xi-vfin);
+    --color-xi-lavender: var(--xi-lavender);
+    --color-xi-red: var(--xi-red);
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -84,11 +112,6 @@
     --color-sidebar-primary: var(--sidebar-primary);
     --color-sidebar-foreground: var(--sidebar-foreground);
     --color-sidebar: var(--sidebar);
-    --color-chart-5: var(--chart-5);
-    --color-chart-4: var(--chart-4);
-    --color-chart-3: var(--chart-3);
-    --color-chart-2: var(--chart-2);
-    --color-chart-1: var(--chart-1);
     --color-ring: var(--ring);
     --color-input: var(--input);
     --color-border: var(--border);
@@ -111,22 +134,51 @@
     --radius-md: calc(var(--radius) * 0.8);
     --radius-lg: var(--radius);
     --radius-xl: calc(var(--radius) * 1.4);
-    --radius-2xl: calc(var(--radius) * 1.8);
-    --radius-3xl: calc(var(--radius) * 2.2);
-    --radius-4xl: calc(var(--radius) * 2.6);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    }
+  }
   body {
     @apply bg-background text-foreground;
-    }
+  }
   button:not(:disabled), [role="button"]:not(:disabled) {
     cursor: pointer;
-    }
+  }
   html {
     @apply font-sans;
-    }
+  }
+}
+
+/* Scoped typography styling for WYSIWYG / Markdoc content */
+.prose ul {
+  list-style-type: disc;
+  margin-left: 1.25rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  margin-left: 1.25rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose li {
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  padding-left: 0.25rem;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.prose a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
