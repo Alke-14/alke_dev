@@ -20,6 +20,10 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Ensure Keystatic content files are bundled with serverless/ISR routes on Vercel
+  outputFileTracingIncludes: {
+    '/**': ['./content/**/*'],
+  },
   async headers() {
     return [
       {
